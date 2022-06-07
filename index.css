@@ -1,0 +1,294 @@
+:root {
+    --homeBG: rgb(24, 19, 19);
+    --homeC: #f1e8e8;
+    --header: #000;
+    --habilidadesBG: rgb(53, 47, 47);
+    --contactoBG: rgb(24, 17, 17);
+    --contactoC: wheat;
+    --contactoA: rgb(141, 116, 32);
+    --proyectosBG: rgb(24, 24, 24);
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    border: none;
+    overflow-x: hidden;
+}
+
+h3 {
+    padding: 0;
+    margin: 0;
+}
+
+
+/* Animación Boton de hamburgesa */
+
+.hamburger {
+    min-height: 30px;
+    max-width: 50px;
+}
+
+.hamburger-inner,
+.hamburger-inner:after,
+.hamburger-inner:before {
+    background-color: var(--homeC);
+    position: absolute;
+    width: 40px;
+    height: 4px;
+    border-radius: 5px;
+    content: '';
+    transition-timing-function: ease;
+    transition-duration: 0.3s;
+    transition-property: transform, opacity;
+}
+
+.hamburger-inner:before {
+    top: 10px;
+}
+
+.hamburger-inner:after {
+    top: 20px;
+}
+
+.hamburger.open .hamburger-inner:after {
+    top: 0;
+    transform: translate3d(-10px, -9px, 0) rotate(-45deg) scale(0.7, 1);
+    transition: top 0.3s ease, transform 0.1s 0.1s cubic-bezier(0.895, 0.03, 0.685, 0.22);
+}
+
+.hamburger.open .hamburger-inner:before {
+    top: 0;
+    transform: translate3d(-9px, 9px, 0) rotate(45deg) scale(0.7, 1);
+    transition: top 0.3s ease, transform 0.1s 0.1s cubic-bezier(0.895, 0.03, 0.685, 0.22);
+}
+
+
+/* Animación Menu */
+
+.animacionMenuOpen {
+    position: relative;
+    animation-name: example;
+    animation-duration: 0.75s;
+    transition: 1s;
+}
+
+@keyframes example {
+    0% {
+        left: 1000px;
+        opacity: 0.4;
+    }
+    100% {
+        left: 0px;
+        opacity: 1;
+    }
+}
+
+.animacionMenuClose {
+    position: relative;
+    animation-name: example1;
+    animation-duration: 0.75s;
+    transition: 1s;
+    opacity: 0;
+}
+
+@keyframes example1 {
+    0% {
+        left: 0px
+    }
+    100% {
+        left: 1000px
+    }
+}
+
+
+/* Animación Del cursor */
+
+.circle {
+    width: 20px;
+    height: 20px;
+    border: 1px solid var(--header);
+    position: absolute;
+    border-radius: 15px;
+}
+
+header {
+    background-color: var(--header);
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    height: 60px;
+    color: var(--homeC);
+    z-index: 1;
+}
+
+button {
+    background: none;
+    border: none;
+    color: var(--homeC);
+}
+
+.buttonBlock {
+    display: block;
+}
+
+button span {
+    background-color: var(--homeC);
+    color: var(--homeBG);
+    font-size: 1.4em;
+    padding: 1px;
+    padding-bottom: 0px;
+    width: 25px;
+    height: auto;
+}
+
+#abuelo {
+    color: var(--homeC);
+    opacity: 0.9;
+    position: relative;
+}
+
+#inicio {
+    min-height: 350px;
+    color: var(--homeC);
+    mix-blend-mode: screen;
+    background-color: var(--homeBG);
+}
+
+#mensajeInicio {
+    display: flex;
+    position: absolute;
+    width: 700px;
+    top: 15vh;
+    left: 15vh;
+    line-height: 1.4em;
+    letter-spacing: 0.3em;
+    font-family: 'Chakra Petch';
+    font-size: 1.8em;
+}
+
+#mezcladivs1 {
+    background: linear-gradient(0deg, var(--habilidadesBG) 12%, var(--homeBG) 100%);
+    height: 60px;
+}
+
+#mezcladivs2 {
+    background: linear-gradient(180deg, var(--habilidadesBG) 12%, var(--proyectosBG) 100%);
+    height: 60px;
+}
+
+#mezcladivs3 {
+    background: linear-gradient(180deg, var(--proyectosBG) 12%, var(--contactoBG) 50%);
+    height: 60px;
+}
+
+#skill {
+    min-height: 300px;
+    background-color: var(--habilidadesBG);
+    mix-blend-mode: screen;
+    position: relative;
+}
+
+#habilidades {
+    position: absolute;
+    top: 5vh;
+    left: 10vh;
+    font-size: 1.2em;
+}
+
+#contacto {
+    background-color: var(--contactoBG);
+    color: azure;
+    min-height: 400px;
+    padding-left: 30px;
+}
+
+#contactDiv {
+    max-width: 805px;
+    position: relative;
+}
+
+#contacto p {
+    margin-top: 0;
+    padding-top: 25px;
+    margin-left: 25px;
+}
+
+.inputS {
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+.inputS label {
+    position: absolute;
+    left: 0;
+    font-size: 1em;
+    transition: 1s;
+}
+
+.after {
+    font-size: 0.5em;
+    color: var(--contactoA);
+    transform: translateY(-20px) translateX(-5px) scale(0.8);
+    transition: all 1s;
+}
+
+.inputS input,
+textarea {
+    background-color: rgb(24, 17, 17);
+    color: var(--contactoC);
+    border: none;
+    border-bottom: solid 1px var(--contactoA);
+    width: 100vh;
+    height: 20px;
+    outline: none;
+}
+
+.inputS .mensaje {
+    background-color: rgb(24, 17, 17);
+    color: var(--contactoC);
+    border: none;
+    border-bottom: solid 1px var(--contactoA);
+    width: 100vh;
+    height: 30px;
+    outline: none;
+}
+
+#flecha {
+    transform: rotate(45deg);
+    position: absolute;
+    right: 0vh;
+}
+
+#proyectos {
+    min-height: 450px;
+    background-color: var(--proyectosBG);
+    position: relative;
+}
+
+#proyectos h3 {
+    padding-left: 25px;
+}
+
+#proyectos p {
+    padding-left: 15px;
+    padding-top: 45px;
+    max-width: 150px;
+}
+
+#proyectoBD {
+    background-image: url(../Elements/hieu-vu-minh-He8-FZl-o10-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 350px;
+    width: 350px;
+    position: absolute;
+    left: 50vh;
+    top: 8vh;
+    opacity: 1;
+}

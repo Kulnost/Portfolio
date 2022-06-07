@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Porfolio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital@1&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+</head>
+
+<body>
+    <header>
+        <div style="width: 50px;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" width="40px" height="40px">
+                <path fill="currentColor"
+                    d="M320 64.01v259.4c0 86.36-71.78 156.6-160 156.6s-160-70.26-160-156.6V288c0-17.67 14.31-32 32-32s32 14.33 32 32v35.38c0 51.08 43.06 92.63 96 92.63s96-41.55 96-92.63V64.01c0-17.67 14.31-32 32-32S320 46.34 320 64.01z" />
+            </svg>
+        </div>
+        <div>
+            <button class="botonMenu animacionMenuClose">
+                <span class="menu">^H</span> Home
+            </button>
+            <button class="botonMenu animacionMenuClose">
+                <span class="menu">^C</span> Contacto
+            </button>
+        </div>
+        <div>
+            <button class="botonMenu animacionMenuClose">
+                <span class="menu">^P</span> Proyecto
+            </button>
+            <button class="botonMenu animacionMenuClose">
+                <span class="menu">^H</span> Habilidades
+            </button>
+        </div>
+        <div>
+            <button class="botonMenu animacionMenuClose">
+                <span class="menu ocultar-movil">^🡩</span> Subir
+            </button>
+            <button class="botonMenu animacionMenuClose">
+                <span class="menu ocultar-movil">^🡫</span> Bajar
+            </button>
+        </div>
+
+        <div style="width: 80px;" class="hamburger">
+            <div class="hamburger-inner"></div>
+        </div>
+    </header>
+
+    <section id="abuelo">
+        <div id="inicio">
+            <div id="mensajeInicio">
+                <p>
+                    HOLA &#128512 <br> SOY JOSEMA <br> DESARROLADOR WEB JUNIOR <br> FULLSTACK DEVELOPER
+                </p>
+            </div>
+        </div>
+        <div id="mezcladivs1">
+        </div>
+        <div id="skill">
+            <div id="habilidades">
+                <h3>Habilidades</h3>
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>PHP</li>
+                    <li>MySQL</li>
+                    <li>JQuery</li>
+                </ul>
+            </div>
+        </div>
+        <div id="mezcladivs2">
+        </div>
+        <div id="proyectos">
+            <div>
+                <h3>Proyectos</h3>
+                <p>
+                    El proyecto está actualmente en desarrollo, es parcialmente funcional pero aun quedan por implementar varias cuestiones
+                </p>
+                <div id="proyectoBD">
+                    <a href="../Base de Datos/busqueda.php"></a>
+                </div>
+            </div>
+        </div>
+        <div id="mezcladivs3">
+        </div>
+        <div id="contacto">
+            <p>
+                Sientase libre de dejar un e-mail aqui!
+            </p>
+            <form action="#" id="formContacto">
+                <div id="contactDiv">
+                    <p class="inputS">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </p>
+                    <p class="inputS">
+                        <label for="email">Email</label>
+                        <input type="text" id="email" name="email" required>
+                    </p>
+                    <p class="inputS">
+                        <label for="mensaje">Mensaje</label>
+                        <textarea type="text" id="mensaje" name="mensaje" required> </textarea>
+                    </p>
+                    <p>
+                        <input src="../Elements/flecha-blanca.png" type="image" value="Submit" title="Submit" id="flecha">
+
+                    </p>
+                </div>
+            </form>
+        </div>
+    </section>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="index.js"></script>
+
+</html>
